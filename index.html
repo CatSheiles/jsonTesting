@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Testing File</title>
+</head>
+<body>
+    <h1>Json testing</h1>
+    <p>A simple refresher on parsing JSON syntax and its data representation format</p>
+
+   
+    <script type="text/javascript">
+        let comp = 
+
+//most of the time you get info back as a string not a js object so
+//surround comp's in backticks to make it a string to enulate this
+//check out console with and without backticks
+//with backticks console returns the actual json string object only
+`[
+    {
+        "name": "Big Corporation",
+        "numberOfEmployees": 10000,
+        "ceo": "Mary",
+        "rating": 3.6
+    },
+    {
+        "name": "Small Startup",
+        "numberOfEmployees": 3,
+        "ceo": null,
+        "rating": 4.2 
+    }
+]`
+
+console.log(JSON.parse(comp));  //add json.parse takes comp string and turns it into js object
+
+//test how to get just 1st comp's name
+console.log(JSON.parse(comp)[0].name);
+
+//test how to get 2nd comp's name
+console.log(JSON.parse(comp)[1].name);
+
+
+    </script>
+</body>
+</html>
